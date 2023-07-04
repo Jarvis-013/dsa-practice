@@ -97,7 +97,7 @@ int main()
     vector<int> arr{1,2,3,4,5,6,7,8,9,15};
     int s = 18;
     auto p = triplet(arr, s);
-    for(auto v:result)
+    for(auto v:p)
     for(auto no:v){
       cout<<no<<",";
     }
