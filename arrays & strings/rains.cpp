@@ -65,4 +65,3 @@ int trappedwater(vector<int> height){
     return water;
     
     }
-}
