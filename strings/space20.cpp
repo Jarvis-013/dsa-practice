@@ -9,7 +9,7 @@ string space20(string st) {
     int n = st.size();
     string result;
     int i = st.find(" ");
-    result = st.substr(0, i) + "%20";
+    result = st.substr(0, i) + "%2";
     while (i != string::npos) {
         int temp = i;
         i = st.find(" ", i + 1);
