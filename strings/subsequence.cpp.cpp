@@ -25,9 +25,9 @@ bool subsequence(string str, string check) {
 }
 
 int main() {
-    string s1 = "hellothere";
+    string s3 = "hellothere";
     string s2 = "elaer";
-    if (subsequence(s1, s2))
+    if (subsequence(s3, s2))
         cout << "yes";
     else
         cout << "NO";
