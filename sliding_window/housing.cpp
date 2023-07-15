@@ -7,13 +7,13 @@ using namespace std;
 void housing(vector<int> &arr,int n,int k){
     int i=0;
     int j=0,sum=0;
-    while (\j<n)
+    while (j<n)
     {
     sum+=arr[j]; 
     j++;
     while (sum> k && i<j)
     {
-        cs=cs-arr[i];
+        sum=sum-arr[i];
         i++;
     }
     if(cs==k){
@@ -23,7 +23,7 @@ void housing(vector<int> &arr,int n,int k){
 return;
 }
 int main(){
-    int plot[]={1,2,3,4,5,6,7,8};
+    vector<int> plot{1,2,3,4,5,6,7,8};
     int n=sizeof(plots)/sizeof(int);
     int k=8;
     housing(plots,n,k);
