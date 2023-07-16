@@ -9,7 +9,7 @@ void housing(vector<int> &arr,int n,int k){
     int j=0,sum=0;
     while (j<n)
     {
-    sum+=arr[j]; 
+    sum=sum+arr[j]; 
     j++;
     while (sum> k && i<j)
     {
