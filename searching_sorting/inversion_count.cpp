@@ -10,6 +10,7 @@ void merge(vector<int> &arrray,int s,int e){
     int i=s;
     int m=(s+e)/2;
     int j=m+1;
+    int cnt=0;
     vector<int> temp;
     while(i<=m and j<=e){
     if(array[i]<array[j]){
@@ -17,6 +18,7 @@ void merge(vector<int> &arrray,int s,int e){
         i++;
     }
     else{
+        cnt+=(m-i+1);
         temp.push_back(array[j]);
         j++;
     }
@@ -34,24 +36,23 @@ for(int idx=s;idx<e;idx++){
 }
 return;}
 
-void mergesort(vector<int>&arr,int s,int e){
+int inversion_sort(vector<int>&arr,int s,int e){
     if(s>=e){
-        return;
+        return 0;
     }
     int mid=(s+e)/2;
-    mergesort(arr,s,mid);
-    mergesort(arr,mid+1,e);
-    return merge(arr,s,e);
+   int c1= inversion_sort(arr,s,mid);
+   int c2= (arr,mid+1,e);
+   int ci= merge(arr,s,e);
+   return c1+c2+ci;
 }
 
-int main(){
-    vector<int> arr{1,2,5,6,7,3,4};
-    int s=0;
-    int e=arr.size()-1;
-    mergesort(arr,s,e);
-    for(int x:arr){
-        cout<<x<<",";
-    }
-    cout<<endl;
-    return 0
+int main() {
+    vector<int> arr{10, 5, 2, 0, 7, 6, 4};
+    int s = 0;
+    int e = arr.size() - 1;
+    int inversions = inversion_sort(arr, s, e);
+    cout << inversions << endl;
+    return 0;
 }
+
