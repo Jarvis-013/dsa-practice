@@ -25,8 +25,16 @@ public:
     head=n;
 
  }
-
-void reversal(){
+node * reversal(node* head){
+    node curr=head;
+    node prev=NULL;
+    while(cur!=NULL){
+        Node temp=cur.next;
+        cur.next=prev;
+        prev=cur;
+        cur=temp;
+    }
+    return prev;
 
 }
 
