@@ -26,15 +26,8 @@ public:
 
  }
 
-node* reversal(node*head){
-// base case
-if(head==NULL or head->next=NULL){
-    return head;
-}
-node *shead=reversal(head->next);
-head->next->next=head;
-head=head->next;
-return shead;
+void reversal(){
+
 }
 
 int main(){
