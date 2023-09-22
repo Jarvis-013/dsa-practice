@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
+#include<algorithm>
 using namespace std;
 
 class node{
@@ -35,7 +35,7 @@ node* mergesort(node* head){
     node *b=mid->next;
 
     a=mergesort(a);
-    b=mergesort(b);
+    b=mergesort(b) ;
 
     return merge(a,b);
 
