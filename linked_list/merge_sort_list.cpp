@@ -14,7 +14,7 @@ public:
     }
 };
  
- void insertAtHead(node * &head,int  data) {
+ void insertAtHead(node * &head,int  data)  {
     if(head==NULL){
         head=new node(data);
         return;
